@@ -1,0 +1,239 @@
+.features-numbers {
+    &.features-numbers-service {
+        & .features-numbers__text {
+            max-width: 538px;
+            margin-top: 50px;
+        }
+    }
+    &.features-teachers {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        & .features-numbers__text {
+            margin-top: 50px;
+            max-width: 538px;
+        }
+        & .features-numbers__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            & p {
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 120%;
+                color: #212C3F;
+            }
+            & span {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 150%;
+                color: #EA142E;
+                display: block;
+                margin-top: 20px;
+            }
+            & li {
+                gap: 0 !important ;
+            }
+            & ul {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0px;
+                margin-top: 20px;
+                & li {
+                    padding-left: 30px;
+                    position: relative;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 150%;
+                    color: #212C3F;
+                    gap: 0 !important;
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 6px;
+                        height: 6px;
+                        background-color: #212C3F;
+                        border-radius: 100%;
+                        left: 13px;
+                        top: calc(50% - 3px);
+                    }
+                }
+            }
+        }
+    }
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &__wrap {
+        margin-top: 30px;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 307px 307px 307px;
+        gap: 30px;
+        justify-content: space-between;
+        & li {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            & p {
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 120%;
+                color: #212C3F;
+            }
+            & span {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+                color: #212C3F;
+            }
+        }
+    }
+    &__text {
+        width: 100%;
+        max-width: 964px;
+        display: block;
+        padding: 50px 54px;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 120%;
+        color: #212C3F;
+        margin-top: 25px;
+        background: #F3F7FA;
+        border: 1px solid #EBEFF0;
+        border-radius: 20px;
+        & span {
+            color: #EA142E;
+        }
+    }
+}
+
+@media(max-width: 1199px) {
+    .features-numbers {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        & .features-teachers
+        &.features-teachers {
+            & .features-numbers__text {
+                margin-top: 40px;
+                max-width: 100%;
+                width: fit-content;
+            }
+            & .features-numbers__list {
+                gap: 12px;
+                & p {
+                    font-size: 26px;
+                    line-height: 130%;
+                }
+                & span {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 150%;
+                    margin-top: 18px;
+                }
+                & ul {
+                    margin-top: 18px;
+                    & li {
+                        padding-left: 24px;
+                        font-size: 16px;
+                        line-height: 150%;
+                        &::before {
+                            width: 4px;
+                            height: 4px;
+                            left: 10px;
+                            top: 11px;
+                        }
+                    }
+                }
+            }
+        }
+        &.features-teachers {
+
+            & .features-numbers__text {
+                margin-top: 50px;
+                max-width: 538px;
+            }
+            & .features-numbers__list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                & p {
+                    font-size: 26px;
+                    line-height: 130%;
+                }
+                & span {
+                    font-size: 16px;
+                    line-height: 150%;
+                    margin-top: 18px;
+                }
+                & ul {
+                    & li {
+                        font-size: 16px;
+                        line-height: 150%;
+                    }
+                }
+            }
+        }
+        &__wrap {
+            margin-top: 30px;
+        }
+        &__list {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 19px;
+            justify-content: space-between;
+            & li {
+                gap: 10px;
+                & p {
+                    font-size: 26px;
+                    line-height: 130%;
+                }
+                & span {
+                    font-size: 14px;
+                    line-height: 150%;
+                }
+            }
+        }
+        &__text {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            padding: 25px;
+            max-width: 596px;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+    } 
+}
+
+@media(max-width: 768px) {
+    .features-numbers {
+        padding-top: 35px;
+        padding-bottom: 35px;
+        &.features-numbers-service {
+            & .features-numbers__text {
+
+                max-width: 345px;
+            }
+        }
+        &.features-teachers {
+            & .features-numbers__text {
+                margin-top: 25px;
+            }
+            & .features-numbers__list {
+                gap: 30px;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &__wrap {
+            margin-top: 20px;
+        }
+        &__list {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        &__text {
+            margin-top: 25px;
+        }
+    } 
+} 

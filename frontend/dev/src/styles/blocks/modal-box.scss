@@ -1,0 +1,114 @@
+.modal-box {
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: 895px;
+    &__container {
+        padding: 95px 86px;
+        padding-bottom: 75px;
+        background: #212C3F;
+        border-radius: 50px;
+        position: relative;
+    }
+    &__header {
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 110%;
+        color: #FFFFFF;
+    }
+    &__subtitle {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 139%;
+        color: #FFFFFF;
+        display: block;
+        margin-top: 23px;
+    }
+    &__form {
+        margin-top: 41px;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    &__btn.btn-red.two {
+        margin-top: 42px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    &__cheked-confederacy.cheked-confederacy {
+        margin-top: 24px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .modal-box {
+        &__container {
+            padding: 43px;
+            padding-right: 30px;
+            padding-bottom: 27px;
+            border-radius: 10px;
+        }
+        &__header {
+            font-size: 26px;
+            line-height: 110%;
+        }
+        &__subtitle {
+            font-size: 16px;
+            line-height: 130%;
+            margin-top: 13px;
+        }
+        &__form {
+            margin-top: 24px;
+        }
+        &__list {
+            gap: 18px;
+        }
+        &__btn.btn-red.two {
+            margin-top: 14px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 11px;
+            line-height: 15px;
+        }
+        &__cheked-confederacy.cheked-confederacy {
+            margin-top: 12px;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .modal-box {
+        &__container {
+            padding: 0;
+            padding: 54px 20px;
+            padding-bottom: 19px;
+        }
+        &__header {
+            font-size: 24px;
+        }
+        &__subtitle {
+            margin-top: 19px;
+        }
+        &__form {
+            margin-top: 16px;
+        }
+        &__list {
+            grid-template-columns: 1fr;
+            gap: 13px;
+        }
+        &__btn.btn-red.two {
+            margin-top: 24px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 14px;
+            line-height: 19px;
+        }
+        &__cheked-confederacy.cheked-confederacy {
+            margin-top: 19px;
+        }
+    }
+}

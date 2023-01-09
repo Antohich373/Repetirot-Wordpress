@@ -1,0 +1,48 @@
+.page-title {
+    &.services-page-title {
+        & h2 {
+            max-width: 1000px;
+        }
+    }
+    margin-top: 60px;
+    & h2 {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 120%;
+        color: #212C3F;    
+        max-width: 1068px;    
+    }
+    & p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #212C3F;
+        display: block;
+        max-width: 530px;
+        margin-top: 30px;
+    }
+}
+
+@media(max-width: 1199px) {
+    .page-title {
+        &.portfolios-title {
+            display: none;
+        }
+        margin-top: 40px;
+        & h2 {
+            font-size: 34px;
+            line-height: 120%;            
+        }
+        & p {
+            font-size: 16px;
+            line-height: 130%;
+            margin-top: 20px;
+        }
+    } 
+}
+
+@media(max-width: 768px) {
+    .page-title {
+        margin-top: 25px;
+    }  
+}

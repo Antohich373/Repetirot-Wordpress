@@ -1,0 +1,32 @@
+@mixin font($f_name, $f_style, $f_weight, $f_url) {
+	@font-face {
+		font-family: $f_name;
+		font-style: $f_style;
+		font-weight: $f_weight;
+		font-display: swap;
+		src: url($f_url) format('woff2');
+	}
+}
+
+@mixin customScroll($type:'vertical',$width:0px,$height:0px,$color_thumb:$colorThumb,$color_track:$colorTrack) {
+	@if ($type=='vertical') {
+		&::-webkit-scrollbar {
+			padding: 10px 0px 10px 10px;
+			width: 10px;
+		}
+		&::-webkit-scrollbar-track {
+			border-radius: 9999px;
+			width: $width;
+			border-radius: $width/2;
+			background: $color_track;
+			border: (10px - $width)/2 solid rgba(0, 0, 0, 0);
+			background-clip: padding-box;
+		}
+		&::-webkit-scrollbar-thumb {
+			border: (10px - $width)/2 solid rgba(0, 0, 0, 0);
+			background: $color_thumb;
+			border-radius: 9999px;
+			background-clip: padding-box;
+		}
+	}
+}

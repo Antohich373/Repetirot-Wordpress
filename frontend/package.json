@@ -1,0 +1,48 @@
+{
+  "name": "startHtml",
+  "version": "1.0.0",
+  "description": "startHtml - Lightweight Gulp Starter",
+  "main": "index.js",
+  "author": "Elias Koch extend WebDesign Master",
+  "type": "module",
+  "browserslist": [
+    "last 10 versions"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
+    "autoprefixer": "^10.3.4",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-root-import": "^6.6.0",
+    "browser-sync": "^2.27.5",
+    "browsersync-ssi": "^0.2.4",
+    "cssnano": "^5.0.8",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-changed": "^4.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rsync": "^0.0.9",
+    "gulp-sass": "^5.0.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.41.0",
+    "smart-grid": "^2.1.2",
+    "webpack": "^5.52.1",
+    "webpack-stream": "^7.0.0"
+  },
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build"
+  },
+  "dependencies": {
+    "minimasonry": "^1.3.1",
+    "swiper": "^7.3.0"
+  }
+}

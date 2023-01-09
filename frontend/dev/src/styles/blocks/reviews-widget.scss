@@ -1,0 +1,98 @@
+.reviews-widget {
+    padding-top: 50px;
+    padding-bottom: 35px;
+    &.reviews-widget-vk {
+        padding-top: 35px;
+        padding-bottom: 50px;
+        & .reviews-widget__card {
+            width: fit-content;
+        }
+    }
+    &__wrap {
+        display: grid;
+        grid-template-columns: minmax(450px, 683px) minmax(300px, 683px);
+        gap: 50px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 120%;
+        color: #212C3F;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #212C3F;
+        display: block;
+        max-width: 540px;
+        margin-top: 20px;
+    }
+    &__link {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #EA142E;
+        display: block;
+        padding-right: 32px;
+        margin-top: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        & svg {
+            position: absolute;
+            right: 0;
+        }
+    }
+    &__yandex {
+        width: 100% !important;
+    }
+}
+
+@media(max-width: 1199px) {
+    .reviews-widget {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        &.reviews-widget-vk {
+            padding-bottom: 40px;
+            padding-top: 50px;
+        }
+        &__wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        &__title {
+            font-size: 34px;
+            line-height: 120%;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 150%;
+            margin-top: 10px;
+        }
+        &__link {
+            margin-top: 30px;
+        }
+    } 
+}
+
+@media(max-width: 768px) {
+    .reviews-widget {
+        padding-top: 35px;
+        padding-bottom: 35px;
+        &.reviews-widget-vk {
+            padding-bottom: 35px;
+            padding-top: 35px;
+        }
+        &__wrap {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        &__link {
+            margin-top: 13px;
+        }
+    } 
+}

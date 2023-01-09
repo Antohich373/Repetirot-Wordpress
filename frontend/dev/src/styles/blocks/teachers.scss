@@ -1,0 +1,124 @@
+.teachers {
+    padding-top: 90px;
+    padding-bottom: 100px;
+    &__subtitle {
+        display: block;
+        max-width: 530px;
+        margin-top: 30px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        color: #212C3F;
+    }
+    &__btn {
+        display: block;
+        padding: 20px 41px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #212C3F;
+        border: 1px solid #212C3F;
+        border-radius: 10px;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+    &__wrap {
+        margin-top: 60px;
+        overflow: visible !important;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        z-index: 1;
+        &.active li {
+            display: block !important;
+        }
+        & li:hover .tutor-card__box { 
+            z-index: 3;
+        }
+        & .tutor-card__box {
+            z-index: 2;
+        }
+    }
+    &__list li:not(:nth-child(-n+10)) {
+        display: none;
+    }
+    & .tutor-card {
+        height: 320px;
+    }
+    & .tutor-card__content-name {
+        max-width: 220px;
+    }
+}
+
+@media(max-width: 1199px) {
+    .teachers {
+        padding-top: 50px;
+        padding-bottom: 40px;
+        overflow: hidden;
+        &__subtitle {
+            max-width: 566px;
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 150%;
+        }
+        &__list li:not(:nth-child(-n+10)) {
+            display: block;
+        }
+        &__wrap {
+            margin-top: 30px;
+            overflow: visible !important;
+            clip-path: polygon(0 100%, 0 0, 200% 0, 200% 100%);
+        }
+        &__btn {
+            display: none;
+        }
+        //&__list {
+        //    display: grid;
+        //    grid-template-columns: 1fr 1fr;
+        //    gap: 20px;
+        //}
+        &__list {
+            display: flex;
+            gap: 0px;
+        }
+
+        & .tutor-card {
+            height: auto;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .teachers {
+        padding-top: 35px;
+        padding-bottom: 35px;
+        &__subtitle {
+            margin-top: 10px;
+        }
+        //&__list li:not(:nth-child(-n+5)) {
+        //    display: none;
+        //}
+        &__wrap {
+            margin-top: 24px;
+        }
+
+    }
+}
+
+@media(max-width: 550px) { 
+    .teachers__list {
+        //display: grid;
+        //grid-template-columns: 1fr;
+        & li {
+            & .tutor-card__content-name {
+                font-size: 18px !important;
+                max-width: 160px;
+            }
+        }
+    }
+}

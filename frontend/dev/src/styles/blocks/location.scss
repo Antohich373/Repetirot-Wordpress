@@ -1,0 +1,93 @@
+.location {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    &__wrap {
+        margin-top: 40px;
+    }
+    &__swiper {
+        overflow: visible !important;
+        clip-path: polygon(0 100%, 0 0, 200% 0, 200% 100%);
+    }
+    &__swiper-slide img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    &__juridical {
+        margin-top: 76px;
+        & h3 {
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 120%;
+            color: #212C3F;
+        }
+    }
+    &__juridical-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-top: 20px;
+        & div {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            color: #212C3F;
+        }
+    }
+}
+
+@media(max-width: 1199px) {
+    .location {
+        padding-top: 50px;
+        padding-bottom: 40px;
+        &__wrap {
+            margin-top: 30px;
+        }
+        &__juridical {
+            & h3 {
+                font-size: 26px;
+                line-height: 130%;
+            }
+        }
+        &__juridical-box {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 34px;
+            margin-top: 20px;
+            & div {
+                font-size: 14px;
+                line-height: 150%;
+            }
+        }
+    } 
+}
+
+@media(max-width: 768px) {
+    .location {
+        padding-top: 33px;
+        padding-bottom: 35px;
+        &__wrap {
+            margin-top: 20px;
+        }
+        &__juridical {
+            margin-top: 56px;
+            & h3 {
+                font-size: 26px;
+                line-height: 130%;
+            }
+        }
+        &__juridical-box {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0;
+            margin-top: 20px;
+            & div {
+                font-size: 16px;
+                line-height: 150%;
+            }
+        }
+    } 
+}

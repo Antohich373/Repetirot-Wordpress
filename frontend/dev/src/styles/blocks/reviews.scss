@@ -1,0 +1,126 @@
+.reviews {
+    padding-top: 30px;
+    padding-bottom: 90px;
+    &__wrap {
+        padding-right: 323px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 277px;
+            height: 667px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-image: url('../assets/images/reviews/decor.webp');
+            right: 0;
+            top: -99px;
+        }
+    }
+    &__list {
+        column-count: 2;
+        column-gap: 30px;
+        & li:not(:nth-child(-n+6)) {
+            display: none;
+        }
+        &.active li {
+            display: block !important;
+        }
+        & li {
+            column-gap: 30px;
+            page-break-inside: avoid;
+            margin-bottom: 79px;
+            & .review-card {
+                background-color: #F3F7FA;
+                &::before {
+                    background-image: url('../assets/images/reviews/cloud-dectop.svg');
+                }
+            }
+        }
+    }
+    &__btn {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        margin-top: 60px;
+        padding: 20px 28px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #212C3F;
+        border: 1px solid #212C3F;
+        border-radius: 10px;
+        transition: all 0.3s;
+        &:hover {
+            color: #EA142E;
+            border: 1px solid #EA142E;
+        }
+    }
+}
+
+@media(max-width: 1199px) {
+    .reviews {
+        padding-top: 30px;
+        padding-bottom: 50px;
+        &__wrap {
+            padding-right: 0px;
+            &::before {
+                display: none;
+            }
+        }
+        &__list {
+            column-count: 2;
+            column-gap: 12px;
+            & li {
+                margin-bottom: 44px;
+                & .review-card {
+                    background-color: #F3F7FA;
+                    &::before {
+                        background-image: url('../assets/images/reviews/cloud-tablet.svg');
+                    }
+                }
+            }
+        }
+        &__btn {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 40px;
+            font-size: 11px;
+            line-height: 15px;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .reviews {
+        padding-top: 25px;
+        padding-bottom: 35px;
+        &__list {
+            column-count: 0;
+            column-gap: 0px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+            & li {
+                margin-bottom: 0px;
+                & .review-card {
+                    background-color: #F3F7FA;
+                    &::before {
+                        background-image: url('../assets/images/reviews/cloud-mobile.svg');
+                    }
+                }
+            }
+        }
+        &__btn {
+            margin-top: 50px;
+            padding: 20px 14px;
+            font-size: 14px;
+            line-height: 19px;
+            border-radius: 20px;
+        }
+    }
+}

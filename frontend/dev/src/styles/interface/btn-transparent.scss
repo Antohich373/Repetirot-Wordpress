@@ -1,0 +1,34 @@
+.btn-transparent {
+    display: block;
+    width: 100%;
+    padding: 30px 10px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #212C3F;
+    background-color: transparent;
+    border: 1px solid #212C3F;
+    border-radius: 20px;
+    transition: all 0.3s;
+    &:hover {
+        border: 1px solid #EA142E;
+        color: #EA142E;
+    }
+}
+
+@media(max-width: 1199px) {
+    .btn-transparent {
+        padding: 20px 10px;
+        font-size: 12px;
+        line-height: 16px;
+    }  
+}
+
+@media(max-width: 768px) {
+    .btn-transparent {
+        font-size: 14px;
+        line-height: 19px;
+    }  
+}

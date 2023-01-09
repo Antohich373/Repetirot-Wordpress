@@ -1,0 +1,47 @@
+.input-castom {
+    display: block;
+    padding: 16px 25px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 139%;
+    color: #212C3F;
+    background: #FFFFFF;
+    border-radius: 10px;
+    width: 100%;
+    &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 139%;
+        color: #707C88;
+    }
+}
+
+@media(max-width: 1199px) {
+    .input-castom {
+        padding: 9px 15px;
+        border-radius: 5px;
+        font-size: 10px;
+        line-height: 139%;
+        &::placeholder {
+            font-size: 10px;
+            line-height: 139%;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .input-castom {
+        padding: 20px 30px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 139%;
+        font-size: 16px;
+        line-height: 139%;
+        border-radius: 10px;
+
+        &::placeholder {
+            font-size: 16px;
+            line-height: 139%;
+        }
+    }
+}

@@ -1,0 +1,276 @@
+.record {
+    padding-top: 50px;
+    padding-bottom: 75px;
+    &.record-teacher {
+        padding-bottom: 85px;
+    }
+    &.record-gallery {
+        padding-bottom: 187px;
+    }
+    &.record-articles {
+        padding-top: 0;
+    }
+    &.record-services {
+        padding-bottom: 100px;
+    }
+    &.portfolios-record {
+        padding-bottom: 150px;
+    }
+    &.reviews {
+        & .record__box::before {
+            width: 287px;
+            height: 287px;
+            background-image: url('../assets/images/record/decor-reviews.png');
+            left: 165px;
+            bottom: -53px;
+        }
+    }
+    &__box {
+        padding-top: 81px;
+        padding-right: 80px;
+        padding-bottom: 64px;
+        padding-left: 73px;
+        background: #212C3F;
+        border-radius: 50px;
+        display: grid;
+        grid-template-columns: 381px 1fr;
+        gap: 41px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 391px;
+            height: 231px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-image: url('../assets/images/record/decor.webp');
+            left: 93px;
+            bottom: -51px;
+        }
+    }
+    &__header {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 110%;
+        color: #FFFFFF;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 139%;
+        color: #FFFFFF;
+        display: block;
+        margin-top: 8px;
+    }
+    &__input-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 14px;
+        & .select.select-1 {
+            width: 100%;
+            max-width: 100%;
+        }
+        & .select__button.input-castom {
+            padding: 20px 30px;
+            color: #707C88;
+            position: relative;
+            max-width: 100%;
+            width: 100%;
+            & + ul {
+                max-width: 100%;
+                width: 100%;
+                border-radius: 10px;
+                max-height: 300px;
+                overflow: auto;
+                &::-webkit-scrollbar {
+                    width: 3px;
+                }
+                &::-webkit-scrollbar-track {
+                    background: #CECECE;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: #EA142E;
+                    border-radius: 20px;
+                }
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                width: 9px;
+                height: 8px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                background-image: url("../assets/images/interfice/select-arrow.svg");
+                top: calc(50% - 4px);
+                right: 14px;
+            }
+        }
+    }
+    &__textarea.input-castom {
+        height: 181px;
+        width: 100%;
+        margin-top: 16px;
+    }
+    &__btn.btn-red.two {
+        margin-top: 17px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-size: 14px;
+        line-height: 19px;
+    }
+    &__cheked-confederacy.cheked-confederacy {
+        margin-top: 20px;
+    }
+}
+
+@media(max-width: 1199px) {
+    .record .select__button.input-castom {
+        padding: 9px 15px;
+        font-size: 10px;
+        line-height: 139%;
+    }
+    .record.record-teacher {
+        padding-bottom: 20px;
+    }
+    .record.portfolios-record {
+        margin-bottom: 100px;
+        padding-bottom: 20px;
+    }
+    .record .record-services {
+        padding-bottom: 70px;
+    }
+    .record__input-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 1199px) {
+    .record {
+        padding-top: 35px;
+        padding-bottom: 55px;
+        &.record-services {
+            padding-bottom: 90px;
+        }
+        &.record-gallery {
+            padding-bottom: 90px;
+        }
+        &.record-articles {
+            padding-top: 35px;
+        }
+        &.reviews {
+            & .record__box::before {
+                width: 135px;
+                height: 135px;
+                left: 79px;
+                bottom: -49px;
+            }
+        }
+        &__box {
+            padding: 43px;
+            padding-bottom: 37px;
+            grid-template-columns: 224px 1fr;
+            gap: 24px;
+            border-radius: 25px;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 230px;
+                height: 136px;
+                left: 43px;
+                bottom: -49px;
+            }
+        }
+        &__header {
+            font-size: 26px;
+            line-height: 110%;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 130%;
+            margin-top: 8px;
+        }
+        &__input-box {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+        }
+        &__textarea.input-castom {
+            height: 107px;
+            width: 100%;
+            margin-top: 9px;
+        }
+        &__btn.btn-red.two {
+            margin-top: 7px;
+        }
+        &__cheked-confederacy.cheked-confederacy {
+            margin-top: 0px;
+        }
+    }  
+}
+
+@media(max-width: 768px) {
+    .record {
+        padding: 0;
+        margin-top: 35px;
+        margin-bottom: 35px;
+        background: #212C3F;
+        & .select__button.input-castom {
+            padding: 22px 30px;
+            font-size: 16px;
+            line-height: 139%;
+        }
+        &.record-services {
+            margin-bottom: 70px;
+        }
+        &.record-gallery {
+            padding-bottom: 0;
+            margin-bottom: 70px;
+        }
+        &.record-articles {
+            padding-bottom: 0;
+            margin-top: 35px;
+        }
+        &__box {
+            padding-top: 41px;
+            padding-right: 0px;
+            padding-bottom: 50px;
+            padding-left: 0px;
+            background: #212C3F;
+            border-radius: 0px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            position: relative;
+            &::before {
+                display: none;
+            }
+        }
+        &__header {
+            font-size: 34px;
+            line-height: 120%;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 150%;
+            margin-top: 19px;
+        }
+        &__input-box {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 13px;
+        }
+        &__textarea.input-castom {
+            height: 120px;
+            width: 100%;
+            margin-top: 12px;
+        }
+        &__btn.btn-red.two {
+            margin-top: 25px;
+        }
+        &__cheked-confederacy.cheked-confederacy {
+            margin-top: 24px;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+.article {
+    padding-top: 30px;
+    padding-bottom: 90px;
+    &__wrap {
+        max-width: 1226px;
+    }
+    &__date {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #707C88;
+    }
+    & img {
+        width: auto;
+        height: auto;
+        border-radius: 20px;
+        display: block;
+        margin-top: 30px;
+    }
+    & p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #212C3F;
+        display: block;
+        margin-top: 25px;
+        & a {
+            color: #EA142E;
+            text-decoration: underline;
+        }
+    }
+    & strong {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        color: #212C3F;
+        margin-top: 25px;
+        display: block;
+    }
+    & ul {
+        margin-top: 25px;
+        & li {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 150%;
+            color: #212C3F;
+            padding-left: 25px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 6px;
+                height: 6px;
+                background-color: #212C3F;
+                left: 12px;
+                top: calc(50% - 3px);
+                border-radius: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width: 1199px) {
+    .article {
+        padding-top: 25px;
+        padding-bottom: 40px;
+        &__wrap {
+            max-width: 571px;
+        }
+        &__date {
+            font-size: 16px;
+            line-height: 130%;
+        }
+        & img {
+            margin-top: 20px;
+        }
+        & p {
+            font-size: 16px;
+            line-height: 150%;
+            margin-top: 20px;
+        }
+        & strong {
+            font-size: 16px;
+            line-height: 150%;
+            margin-top: 35px;
+        }
+        & ul {
+            margin-top: 28px;
+            & li {
+                font-size: 16px;
+                line-height: 150%;
+                padding-left: 23px;
+                &::before {
+                    width: 4px;
+                    height: 4px;
+                    left: 10px;
+                    top: 12px;
+                }
+            }
+        }
+    }  
+}

@@ -1,0 +1,57 @@
+.modal-connection {
+    max-width: 1397px;
+    padding-left: 16px;
+    padding: 0px;
+    & .record__box {
+        position: relative;
+    }
+    
+    &__close {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url('../assets/images/modal-connection/close.svg');
+        right: 38px;
+        top: 38px;
+    }
+}
+
+@media(max-width: 1199px) {
+    .modal-connection {
+        & .record__box {
+            border-radius: 10px;
+        }
+        &__close {
+            width: 20px;
+            height: 20px;
+            background-size: cover;
+            right: 15px;
+            top: 15px;
+        }
+    }
+}
+
+@media(max-width: 768px) { 
+    .modal-connection {
+        & .record__box {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 54px;
+        }
+        & .record__header {
+            font-size: 26px;
+            line-height: 130%;
+        }
+        & .record__text {
+            font-size: 16px;
+            line-height: 150%;
+        }
+        &__close {
+            right: 20px;
+            top: 20px;
+        }
+    }
+}

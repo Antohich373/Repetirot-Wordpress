@@ -1,0 +1,155 @@
+.review-card {
+    padding: 38px;
+    background: #FFFFFF;
+    border-radius: 25px;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        width: 103px;
+        height: 90px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('../assets/images/review/cloud-dectop.svg');
+        left: 0px;
+        bottom: -30px;
+    }
+    &__name {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 150%;
+        color: #212C3F;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 150%;
+        color: #212C3F;
+        display: block;
+        margin-top: 10px;
+        max-height: 243px;
+        overflow: hidden;
+    }
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 41px;
+    }
+    &__btn {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: #707C88;
+        display: block;
+        width: fit-content;
+        padding-left: 24px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 15px;
+            height: 17px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url('../assets/images/review/btn-review.svg');
+            left: 0;
+            top: calc(50% - 8px);
+        }
+    }
+    &__data {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: #707C88;
+    }
+}
+
+@media(max-width: 1199px) {
+    .review-card {
+        padding: 23px;
+        border-radius: 15px;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 52px;
+            height: 45px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../assets/images/review/cloud-tablet.svg');
+            left: 0px;
+            bottom: -17px;
+        }
+        &__name {
+            font-size: 16px;
+            line-height: 150%;
+        }
+        &__text {
+            font-size: 12px;
+            line-height: 150%;
+            margin-top: 7px;
+            max-height: 110px;
+            overflow: hidden;
+        }
+        &__box { 
+            margin-top: 5px;
+        }
+        &__btn {
+            font-size: 10px;
+            line-height: 150%;
+            padding-left: 15px;
+            position: relative;
+            &::before {
+                width: 10px;
+                height: 12px;
+                top: calc(50% - 6px);
+            }
+        }
+        &__data {
+            font-size: 10px;
+            line-height: 150%;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .review-card {
+        padding: 30px;
+        border-radius: 20px;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 70px;
+            height: 61px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url('../assets/images/review/cloud-mobile.svg');
+            left: 0px;
+            bottom: -17px;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 150%;
+            margin-top: 10px;
+            max-height: 168px;
+        }
+        &__box {
+            margin-top: 18px;
+        }
+        &__btn {
+            font-size: 13px;
+            line-height: 150%;
+            padding-left: 26px;
+            &::before {
+                width: 15px;
+                height: 16px;
+                top: calc(50% - 8px);
+            }
+        }
+        &__data {
+            font-size: 13px;
+            line-height: 150%;
+        }
+    }  
+}

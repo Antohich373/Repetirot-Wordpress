@@ -1,0 +1,100 @@
+.tutor {
+    padding-top: 50px;
+    padding-bottom: 0px;
+    overflow: hidden;
+    &__swiper {
+        padding-bottom: 118px;
+        overflow: visible;
+    }
+    &__wrap {
+        margin-top: 40px;
+    }
+    &__swiper {
+        overflow: visible !important;
+        clip-path: polygon(0 100%, 0 0, 200% 0, 200% 100%);
+        transition: all 0.3s;
+    }
+    &__swiper-slide .tutor-card {
+        height: auto;
+    }
+    &__header-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    &__header.section-title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 120%;
+        color: #212C3F;
+    }
+    &__subtitle {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #212C3F;
+        display: block;
+        max-width: 530px;
+        margin-top: 30px;
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+    }
+}
+
+@media(max-width: 1199px) {
+    .tutor {
+        padding-top: 55px;
+        padding-bottom: 55px;
+        overflow: hidden;
+        &__swiper {
+            padding-bottom: 0px;
+            overflow: visible;
+        }
+        &__wrap {
+            margin-top: 30px;
+        }
+        &__swiper {
+            overflow: visible !important;
+            clip-path: polygon(0 100%, 0 0, 200% 0, 200% 100%);
+        }
+        &__header-box {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__header.section-title {
+            font-size: 34px;
+            line-height: 120%;
+        }
+        &__subtitle {
+            font-size: 16px;
+            line-height: 150%;
+            max-width: 566px;
+            margin-top: 20px;
+        }
+    
+        &__controls {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .tutor {
+        padding-top: 35px;
+        padding-bottom: 35px;
+        &__wrap {
+            margin-top: 24px;
+        }
+        &__subtitle {
+            margin-top: 10px;
+        }
+        &__controls {
+            display: none;
+        }
+    }
+}
+

@@ -1,0 +1,453 @@
+.footer {
+    padding-top: 85px;
+    padding-bottom: 85px;
+    background: #212C3F;
+    &__limitation {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+    &__container {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 245px;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    &__nav {
+        display: grid;
+        grid-template-columns: 1fr minmax(400px, 469px);
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+    //Услуги
+    &__nav-service {
+        width: fit-content;
+    }
+    &__nav-service-controls {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 22px;
+        & button {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+        & span {
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color:  rgba(255, 255, 255, 0.1);
+        }
+    }
+    &__nav-service ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        grid-column-gap: 30px;
+        grid-row-gap: 21px;
+        margin-top: 30px;
+        & li a {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 129%;
+            color: rgba(255, 255, 255, 0.5);
+            white-space: nowrap;
+            &:hover {
+                color: #fff !important;
+            }
+        }
+    }
+
+    //Навигация страниц
+    &__nav-page {
+        display: grid;
+        grid-template-columns: auto 260px;
+        height: fit-content;
+    }
+    &__nav-page > ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        & li a {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 20px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            &:hover {
+                color: #EA142E;
+            }
+        }
+    }
+    &__nav-info {
+        display: flex;
+        flex-direction: column;
+    }
+    &__nav-info > ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        & li a {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 20px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+    }
+    &__info-payment {
+        margin-top: auto;
+        & p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        & ul {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 19px;
+        }
+    }
+
+    //КОНТАКТ
+    &__contact-tel {
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 27px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        display: block;
+        padding-left: 30px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 15px;
+            height: 15px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url('../assets/images/footer/tel.svg');
+            left: 0;
+            top: calc(50% - 7px);
+        }
+    }
+    &__contact-mail {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        display: block;
+        padding-left: 31px;
+        margin-top: 25px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 15px;
+            height: 15px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url('../assets/images/footer/mail.svg');
+            left: 0;
+            top: calc(50% - 5px);
+        }
+    }
+    &__contact-adres {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 27px;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        display: block;
+        margin-top: 34px;
+    }
+    &__contact-list {
+        margin-top: 15px;
+        & li p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            letter-spacing: 0.05em;
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+    &__contact .social {
+        margin-top: 51px;
+    }
+    &__confendeciality {
+        display: block;
+        width: 100%;
+        max-width: 1113px;
+        margin-top: 80px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 139%;
+        color: #8C9BAA;
+        & a {
+            color: #8C9BAA;
+            text-decoration: underline;
+        }
+    }
+}
+
+//@media(max-width: 1550px) {
+//    .footer__container {
+//        gap: 20px;
+//    }
+//    .footer__nav-service ul {
+//        display: grid;
+//        grid-template-columns: 1fr 1fr;
+//    }
+//    .footer__nav {
+//        width: fit-content;
+//    }
+//
+//}
+//
+//@media(max-width: 1230px) {
+//    .footer__nav {
+//        display: grid;
+//        grid-template-columns: 1fr;
+//    }
+//}
+
+
+@media(max-width: 1199px) {
+    .footer {
+        padding-top: 50px;
+        padding-bottom: 35px;
+        &__logo {
+
+        }
+        &__limitation {
+            width: 100%;
+            max-width: 688px;
+            margin: 0 auto;
+        }
+        &__container {
+            margin-top: 38px;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        &__nav {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+
+        //Услуги
+        &__nav-service-controls {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            gap: 26px;
+            & button {
+                font-size: 14px;
+                line-height: 19px;
+                padding-right: 27px;
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    background-image: url('../assets/images/footer/service.svg');
+                    right: 0;
+                    top: calc(50% - 5px);
+                    transition: all 0.3s;
+                }
+            }
+        }
+        &__nav-service ul {
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 20px;
+            grid-row-gap: 10px;
+            margin-top: 20px;
+            & li a {
+                font-size: 13px;
+                line-height: 129%;
+            }
+        }
+    
+        //Навигация страниц
+        &__nav-service {
+            width: 100%;
+        }
+        &__nav-page {
+            display: grid;
+            grid-template-columns: auto 256px;
+            height: fit-content;
+            gap: 70px;
+        }
+        &__nav-page > ul {
+            gap: 18px;
+            & li a {
+                font-size: 14px;
+                line-height: 19px;
+            }
+        }
+        &__nav-info > ul {
+            gap: 17px;
+            & li a {
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 0.05em;
+                color: #A6A6A6;
+                text-transform: lowercase;
+                display: block;
+                &:first-letter {
+                    text-transform: uppercase;
+                }
+            }
+        }
+        &__info-payment {
+            margin-top: auto;
+            & p {
+                font-size: 14px;
+                line-height: 19px;
+            }
+            & ul {
+                margin-top: 17px;
+                gap: 17px;
+            }
+        }
+    
+        //КОНТАКТ
+        &__contact-tel {
+            font-size: 16px;
+            line-height: 150%;
+        }
+        &__contact-mail {
+            font-size: 16px;
+            line-height: 150%;
+            margin-top: 20px;
+        }
+        &__contact-adres {
+            font-size: 16px;
+            line-height: 150%;
+            margin-top: 20px;
+        }
+        &__contact-list {
+            margin-top: 10px;
+            & li p {
+                font-size: 14px;
+                line-height: 150%;
+            }
+        }
+        &__contact .social {
+            margin-top: 49px;
+        }
+    }  
+}
+
+@media(max-width: 768px) {
+    .footer {
+        padding-left: 16px;
+        padding-right: 16px;
+        &__logo {
+            & img {
+                width: 162px;
+            }
+        }
+        &__nav-service-controls {
+            &.active + ul {
+                display: grid !important;
+            }
+            & + ul {
+                display: none !important;
+            }
+
+            &.active button::before {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .footer__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .footer__contact {
+        order: 1;
+    }
+    .footer__nav {
+        order: 2;
+        width: 100%;
+    }
+    .footer__nav-service {
+        width: 100%;
+    }
+    .footer__nav-service-controls button {
+        padding-right: 18px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .footer__container {
+        margin-top: 32px;
+    }
+    .footer__nav-service ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 14px;
+        & li a {
+            font-size: 14px;
+            line-height: 129%;
+        }
+    }
+    .footer__nav-page {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer__nav-page > ul li a {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .footer__nav-info > ul {
+        gap: 20px;
+    }
+    .footer__nav-page > ul {
+        gap: 20px;
+    }
+    .footer__nav-info > ul li a {
+        font-size: 16px;
+        line-height: 20px;
+        display: block;
+        &:first-letter {
+            text-transform: uppercase !important;
+        }
+    }
+    .footer__confendeciality {
+        font-size: 12px;
+        line-height: 140%;
+        margin-top: 50px;
+        & .politics {
+            display: block;
+            width: fit-content;
+            margin-top: 8px;
+        }
+        & .offer {
+            display: block;
+            width: fit-content;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+    }
+}

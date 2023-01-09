@@ -1,0 +1,103 @@
+.recommendations {
+    padding-top: 50px;
+    padding-bottom: 70px;
+    &.recommendations-articles {
+        padding-bottom: 70px;
+    }
+    &__wrap {
+        margin-top: 60px;
+    }
+    &__swiper {
+        overflow: visible !important;
+    }
+    &__card {
+        padding: 40px;
+        background: #F3F7FA;
+        border: 1px solid #EBEFF0;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: 218px 1fr;
+        gap: 30px;
+        position: relative;
+    }
+    &__card-img {
+        & img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+    }
+    &__card-content {
+        & h3 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 130%;
+            color: #212C3F;
+        }
+        & p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            color: rgba(33, 44, 63, 0.7);
+            display: block;
+            margin-top: 25px;
+            height: 104px;
+            overflow: hidden;
+        }
+        & span {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            color: #707C88;
+        }
+    }
+}
+
+@media(max-width: 1199px) {
+    .recommendations {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        &.recommendations-articles {
+            padding-bottom: 40px;
+        }
+        &__wrap {
+            margin-top: 25px;
+        }
+        &__card {
+            padding: 0px;
+            background: #fff;
+            border: 0px solid #EBEFF0;
+            border-radius: 0px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        &__card-img {
+            & img {
+                border-radius: 10px;
+            }
+        }
+        &__card-content {
+            & h3 {
+                font-size: 16px;
+                line-height: 150%;
+                margin-top: 6px;
+                order: 2;
+            }
+            & p {
+                display: none;
+            }
+            & span {
+                font-size: 12px;
+                line-height: 150%;
+                position: relative;
+                right: 0;
+                bottom: 0;
+                order: 1;
+            }
+        }
+    }
+}

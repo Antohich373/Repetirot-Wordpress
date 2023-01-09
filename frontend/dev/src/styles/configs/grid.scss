@@ -1,0 +1,119 @@
+@use "sass:math";
+
+$mobile_first: true;
+
+$xs: 560px;
+$sm: 780px;
+$md: 960px;
+$lg: 1100px;
+
+
+$field_zero: 16px; $gap_zero :16px;
+$field_xs: 32px; $gap_xs: 16px;
+$field_sm: 32px;$gap_sm: 16px;
+$field_md: 80px; $gap_md: 20px;
+$field_lg: 100px;$gap_lg: 30px;
+
+
+$container: 100%;
+
+@mixin from($break_point) {
+  $media: '';
+  @if $mobile_first {
+	$media: min-width;
+  } @else {
+	$media: max-width;
+  }
+  @media screen and ($media: $break_point) {
+	@content;
+  }
+}
+
+@mixin to($break_point) {
+  $media: '';
+
+  @if $mobile_first {
+	$media: max-width;
+  } @else {
+	$media: min-width;
+  }
+  @media screen and ($media: $break_point) {
+	@content;
+  }
+
+}
+
+@mixin from-to($break_point_from, $break_point_to) {
+  $media1: '';
+  $media2: '';
+  @if $mobile_first {
+	$media1: min-width;
+	$media2: max-width
+  } @else {
+	$media1: max-width;
+	$media2: min-width
+  }
+
+  @media screen and ($media1: $break_point_from) and ($media2: $break_point_to) {
+	@content;
+  }
+
+
+}
+
+@mixin wrapper() {
+  width: 100%;
+  margin: auto;
+  @if ($mobile_first) {
+	max-width: calc(#{$container} + #{$field_zero});
+	padding-right: $field_zero/2;
+	padding-left: $field_zero/2;
+
+	@include from($xs) {
+	  max-width: calc(#{$container} + #{$field_xs});
+	  padding-right: $field_xs/2;
+	  padding-left: $field_xs/2;
+	}
+	@include from($sm) {
+	  max-width: calc(#{$container} + #{$field_sm});
+	  padding-right: $field_sm/2;
+	  padding-left: $field_sm/2;
+	}
+	@include from($md) {
+	  max-width: calc(#{$container} + #{$field_md});
+	  padding-right: $field_md/2;
+	  padding-left: $field_md/2;
+	}
+	@include from($lg) {
+	  max-width: calc(#{$container} + #{$field_lg});
+	  padding-right: $field_lg/2;
+	  padding-left: $field_lg/2;
+	}
+
+  } @else {
+	max-width: calc(#{$container} + #{$field_lg});
+	padding-right: $field_lg/2;
+	padding-left: $field_lg/2;
+	@include from($lg) {
+	  max-width: calc(#{$container} + #{$field_md});
+	  padding-right: $field_md/2;
+	  padding-left: $field_md/2;
+	}
+	@include from($md) {
+	  max-width: calc(#{$container} + #{$field_sm});
+	  padding-right: $field_sm/2;
+	  padding-left: $field_sm/2;
+	}
+	@include from($sm) {
+	  max-width: calc(#{$container} + #{$field_xs});
+	  padding-right: $field_xs/2;
+	  padding-left: $field_xs/2;
+	}
+	@include from($xs) {
+	  max-width: calc(#{$container} + #{$field_zero});
+	  padding-right: $field_zero/2;
+	  padding-left: $field_zero/2;
+	}
+
+  }
+}

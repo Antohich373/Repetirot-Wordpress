@@ -1,0 +1,319 @@
+.tutor-card {
+    display: block;
+    background: #F3F7FA;
+    border: 1px solid #EBEFF0;
+    border-radius: 20px;
+    width: 100%;
+    height: 302px;
+    transition: all 0.3s;
+    cursor: pointer;
+    &__box-img-mobile {
+        display: none;
+    }
+    &__link-mobile {
+        display: none;
+    }
+    & .tutor-card__info-btn.active + .tutor-card__info{ 
+        display: none;
+    }
+    & .tutor-card__info-btn.active::before {
+        transform: rotate(0deg);
+    }
+    & .tutor-card__box {
+        border: 1px solid rgba(0, 0, 0, 0); 
+    }
+    & .tutor-card__info-btn:hover {
+        color: #EA142E;
+        &:before {
+            background-image: url("../assets/images/tutor/arrow-red.svg");
+        }
+
+    }
+    &:hover {
+        background: #FFFFFF;
+        border-radius: 20px 20px 0 0 ;
+        z-index: 2;
+        border: 1px solid rgba(0, 0, 0, 0);
+        & .tutor-card__controls {
+            opacity: 1;
+            pointer-events: all;
+        }
+        & .tutor-card__box {
+            background-color: #fff;
+            border: 1px solid #EBEFF0;
+            border-radius: 20px 20px 0px 0px;
+            box-shadow: 0px 20px 40px rgb(33 44 63 / 40%);
+        }
+        & .tutor-card__info-btn.active + .tutor-card__info{
+            display: grid;
+        }
+        & .tutor-card__info-btn.active::before {
+            transform: rotate(90deg);
+        }
+    }
+    &__box {
+        display: grid;
+        grid-template-columns: 1fr 218px;
+        position: relative;
+        padding: 40px;
+
+    }
+    &__box-content {
+        display: flex;
+        flex-direction: column;
+    }
+    &__controls {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background: linear-gradient(77.58deg, #212C3F 57.28%, #EA142E 166.86%), #F3F7FA;
+        border-radius: 0px 0px 20px 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 31px;
+        padding: 28px 40px;
+        width: 100%;
+        opacity: 0;
+        pointer-events: none;
+        & button {
+            display: block;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            background: #EA142E;
+            border-radius: 10px;
+            transition: all 0.3s;
+            &:hover {
+                background-color: #C60018;
+            }
+        }
+        & a {
+            display: block;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            display: block;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid #FFFFFF;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+            &:hover {
+                color: #EA142E;
+                border: 1px solid #EA142E;
+
+            }
+        }
+    }
+    &__content-object {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        color: #EA142E;
+        max-width: 200px;
+    }
+    &__content-name {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+        color: #212C3F;
+        margin-top: 35px;
+        text-transform: uppercase;
+    }
+    &__list-info {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 13px;
+        margin-top: 53px;
+    }
+    &__info-btn {
+        display: block;
+        padding-right: 21px;
+        position: relative;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        color: rgba(33, 44, 63, 0.7);
+        width: fit-content;
+        &.active::before {
+            transform: rotate(90deg);
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            width: 9px;
+            height: 15px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-image: url('../assets/images/tutor/arrow.svg');
+            right: 0;
+            top: calc(50% - 7px);
+            transition: all 0.3s;
+        }
+        &.active + .tutor-card__info {
+            display: grid;
+        }
+    }
+    &__box-img {
+        & img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+    }
+    &__info {
+        margin-top: 23px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 11px;
+        display: none;
+        & li {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 130%;
+            color: rgba(33, 44, 63, 0.7);
+            position: relative;
+            padding-left: 25px;
+            &::before {
+                position: absolute;
+                content: '';
+                width: 6px;
+                height: 6px;
+                background-color: rgba(33, 44, 63, 0.7);
+                left: 9px;
+                top: 8px;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+
+//@media(max-width: 1200px) {
+//    .tutor-card__box {
+//        padding: 20px;
+//    }
+//    .tutor-card__content-name {
+//        font-size: 18px;
+//    }
+//    .tutor-card__list-info {
+//        margin-top: 30px;
+//    }
+//}
+
+@media(max-width: 1199px) {
+    .tutor-card__box {
+        box-shadow: none !important;
+    }
+    .tutor-card {
+        display: block;
+        background: #F3F7FA;
+        border: 1px solid #EBEFF0;
+        border-radius: 20px;
+        height: auto;
+        &:hover {
+            background: #F3F7FA;
+            border-radius: 20px;
+            z-index: 2;
+            & .tutor-card__controls {
+                opacity: 1;
+                pointer-events: all;
+            }
+            & .tutor-card__box {
+                background-color: #F3F7FA;
+                border: 1px solid transparent;
+                border-radius: 20px;
+            }
+        }
+        &__box {
+            padding: 30px;
+        }
+        &__box-img-mobile {
+            display: block;
+            margin-top: 25px;
+            & img {
+                width: 100%;
+                height: auto;
+                margin: 0 auto;
+                border-radius: 20px;
+            }
+        }
+        &__link-mobile {
+            display: block;
+            padding: 14px;
+            width: 100%;
+            text-align: center;
+            font-weight: 700;
+            font-size: 11px;
+            line-height: 14px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #212C3F;
+            border: 1px solid #212C3F;
+            border-radius: 10px;
+            margin-top: 26px;
+            &:hover {
+                border: 1px solid #212C3F;
+                color: #fff;
+                background: #212C3F;
+            }
+        }
+        &__content-name {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 130%;
+            color: #212C3F;
+            display: block;
+            margin-top: 15px;
+        }
+        &__box-img {
+            display: none;
+        }
+        &__list-info {
+            display: none;
+        }
+        &__content-object {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 120%;
+            color: #EA142E;
+        }
+
+        &__box {
+            display: grid;
+            grid-template-columns: 1fr;
+            position: relative;
+            padding: 30px;
+        }
+        &__box-content {
+            display: flex;
+            flex-direction: column;
+        }
+        &__controls {
+            display: none;
+        }
+    }  
+}
+
+@media(max-width: 768px) {
+    .tutor-card__box {
+        padding: 30px;
+        box-shadow: none !important;
+    }
+    .tutor-card__content-name {
+        max-width: 230px;
+    }
+}

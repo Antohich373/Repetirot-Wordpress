@@ -1,0 +1,72 @@
+.teaching {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    &__subtitle {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #212C3F;
+        display: block;
+        max-width: 530px;
+        margin-top: 30px;
+    }
+    &__swiper {
+        overflow: visible;
+        z-index: 1;
+        transition: all 0.3s;
+    }
+    &__swiper-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        z-index: 1;
+    }
+    &__controls {
+        z-index: 10;
+    }
+    &__swiper-slide {
+        z-index: 10;
+        & .tutor-card {
+            height: 325px;
+        }
+        & .tutor-card__content-name {
+            max-width: 200px;
+        }
+    }
+    &__swiper-slide:hover {
+        z-index: 11;
+    }
+    &__wrap {
+        margin-top: 40px;
+    }
+}
+
+@media(max-width: 1199px) {
+    .teaching {
+        padding-top: 55px;
+        padding-bottom: 50px;
+        overflow: hidden;
+        &__swiper-slide {
+            & .tutor-card {
+                height: 100%;
+            }
+        }
+        &__subtitle {
+            font-size: 16px;
+            line-height: 150%;
+            max-width: 566px;
+            margin-top: 20px;
+        }
+        &__swiper {
+            overflow: visible !important;
+            clip-path: polygon(0 100%, 0 0, 200% 0, 200% 100%);
+        }
+        &__swiper-wrapper {
+            display: flex;
+            gap: 0px;
+        }
+        &__wrap {
+            margin-top: 30px;
+        }
+    }
+}

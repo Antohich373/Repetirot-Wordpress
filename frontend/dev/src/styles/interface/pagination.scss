@@ -1,0 +1,16 @@
+.pagination {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.3em;
+    color: #212C3F;
+    display: flex;
+    align-items: center;
+    & span {
+        width: fit-content;
+    }
+    & .swiper-pagination-current {
+        color: #EA142E !important;
+    }
+
+}

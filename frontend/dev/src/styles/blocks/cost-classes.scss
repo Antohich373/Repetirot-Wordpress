@@ -1,0 +1,165 @@
+.cost-classes {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    &__subtitle {
+        margin-top: 30px;
+        display: block;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: #212C3F;
+        max-width: 530px;
+    }
+    &__wrap {
+        margin-top: 40px;
+    }
+    &__swiper {
+        overflow: visible !important;
+        clip-path: polygon(0 100%, 0 0, 200% 0, 200% 100%);
+    }
+    &__swiper-wrapper {
+        display: grid;
+        grid-template-columns: 28.7% 1fr 28.7%;
+        gap: 30px;
+    }
+    &__swiper-slide {
+        height: 100% !important;
+    }
+    &__card {
+        padding: 40px;
+        padding-left: 38px;
+        padding-right: 27px;
+        padding-top: 60px;
+        background: #F3F7FA;
+        border: 1px solid #EBEFF0;
+        border-radius: 20px;
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &.optimal::before {
+            position: absolute;
+            content: '';
+            width: 260px;
+            height: 150px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-image: url('../assets/images/cost-classes/optimal.webp');
+            top: calc(50% - 85px);
+            right: -34px;
+        }
+    }
+    &__card-header {
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 120%;
+        color: #212C3F;
+        max-width: 305px;
+        & span {
+            color: #EA142E;
+        } 
+    }
+    &__card-subtitle {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        color: #212C3F;
+        display: block;
+        margin-top: 40px;
+    }
+    &__card-price {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 120%;
+        color: #EA142E;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 42px;
+    }
+    &__card-btn.btn-red.two {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: auto;
+        text-align: center;
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
+
+@media(max-width: 1199px) {
+    .cost-classes {
+        padding-top: 50px;
+        padding-bottom: 35px;
+        &__subtitle {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 150%;
+        }
+        &__wrap {
+            margin-top: 30px;
+        }
+        &__swiper-slide {
+            height: auto !important;
+        }
+        &__swiper-wrapper {
+            display: flex;
+            gap: 0px;
+        }
+        &__card {
+            padding: 30px 26px;
+            &.optimal::before {
+                display: none;
+            }
+        }
+        &__card-header {
+            font-size: 16px;
+            line-height: 120%;
+        }
+        &__card-subtitle {
+            font-size: 14px;
+            line-height: 150%;
+            margin-top: 20px;
+        }
+        &__card-price {
+            font-size: 24px;
+            line-height: 130%;
+            margin-top: 20px;
+        }
+        &__card-btn.btn-red.two {
+            padding-top: 14px;
+            padding-bottom: 14px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+    }    
+}
+
+@media(max-width: 768px) {
+    .cost-classes {
+        padding-top: 35px;
+        padding-bottom: 40px;
+        &__wrap {
+            margin-top: 25px;
+        }
+        &__card {
+            padding: 30px;
+        }
+        &__card-header {
+            font-size: 20px;
+            line-height: 120%;
+        }
+        &__card-subtitle {
+            font-size: 16px;
+            line-height: 150%;
+            margin-top: 20px;
+        }
+        &__card-btn.btn-red.two {
+            font-size: 14px;
+            line-height: 17px;
+            margin-top: 15px;
+        }
+    }     
+}

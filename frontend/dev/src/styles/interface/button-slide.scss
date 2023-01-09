@@ -1,0 +1,25 @@
+.btn-slide {
+    width: 20px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url('../assets/images/interfice/prev-slide.svg');
+    &.next {
+        background-image: url('../assets/images/interfice/next-slide.svg');
+    }
+}
+
+@media(max-width: 1199px) {
+    .btn-slide {
+        width: 15px;
+        height: 30px;
+    }
+}
+
+@media(max-width: 768px) {
+    .btn-slide {
+        width: 20px;
+        height: 40px;
+    }
+}

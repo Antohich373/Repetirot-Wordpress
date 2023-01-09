@@ -1,0 +1,182 @@
+
+.guarantees {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &__header.section-title {
+        display: flex;
+        align-items: flex-start;
+        gap: 25px;
+        position: relative;
+        z-index: 2;
+        & div {
+            position: relative;
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            &:hover {
+                & span {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+            & span {
+                position: absolute;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 120%;
+                color: #212C3F;
+                display: block;
+                padding: 24px;
+                background: #F3F7FA;
+                border: 1px solid #EBEFF0;
+                border-radius: 5px;
+                width: 269px;
+                bottom: calc(100% + 18px);
+                opacity: 0;
+                pointer-events: none;
+                transition: all 0.3s;
+            }
+        }
+    }
+    &__wrap {
+        margin-top: 32px;
+    }
+
+    &__swiper-slide {
+        height: 100% !important;
+    }
+    &__card {
+        padding: 50px 37px;
+        padding-right: 29px;
+        background: #F3F7FA;
+        border: 1px solid #EBEFF0;
+        border-radius: 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        & h3 {
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 120%;
+            color: #212C3F;
+        }
+        & p {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 120%;
+            color: #212C3F;
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 29px;
+        }
+    }
+    &__btn.btn-red.two {
+        padding: 18px 23px;
+        width: fit-content;
+        margin-top:  auto;
+    }
+}
+
+
+@media(max-width: 1199px) {
+    .guarantees {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        &__header.section-title {
+            gap: 15px;
+            & div {
+                & svg {
+                    width: 30px;
+                    height: 30px;
+                }
+                & span {
+                    font-size: 16px;
+                    line-height: 130%;
+                    padding: 16px;
+                    width: 200px;
+                    height: 140px;
+                    bottom: calc(100% + 10px);
+                }
+            }
+        }
+        &__wrap {
+            margin-top: 30px;
+
+        }
+        &__card {
+            padding: 30px 40px;
+            padding-top: 50px;
+            & h3 {
+                font-size: 24px;
+                line-height: 120%;
+            }
+            & p {
+                font-size: 16px;
+                line-height: 130%;
+                margin-top: 18px;
+                margin-bottom: 20px;
+            }
+        }
+        &__btn.btn-red.two {
+            padding: 14px 14px;
+            width: 100%;
+            margin-top:  auto;
+        }
+    } 
+}
+
+@media(max-width: 768px) {
+    .guarantees {
+        padding-top: 35px;
+        padding-bottom: 35px;
+        &__header.section-title {
+            gap: 9px;
+            & div {
+                & span {
+                    right: 0;
+                }
+            }
+        }
+        &__header.section-title {
+            max-width: 270px;
+            & div span {
+                bottom: auto;
+                bottom: 100%;
+                z-index: 2;
+            }
+        }
+        &__wrap {
+            margin-top: 20px;
+        }
+        &__card {
+            padding: 30px 40px;
+            padding-top: 50px;
+            padding-right: 25px;
+            & h3 {
+                font-size: 26px;
+                line-height: 130%;
+            }
+            & p {
+                font-size: 16px;
+                line-height: 130%;
+                margin-top: 13px;
+                margin-bottom: 30px;
+            }
+        }
+        &__btn.btn-red.two {
+            padding: 14px 36px;
+            width: fit-content;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 174px;
+            font-size: 11px;
+            line-height: 14px;
+            margin: 0;
+            border-radius: 10px;
+            margin-top: auto;
+        }
+    }   
+}
